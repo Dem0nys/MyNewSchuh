@@ -1,0 +1,207 @@
+﻿@model MVSschuh.View_Model.RegisterViewModel
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="~/css/RegisterStyle.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <title>Register</title>
+</head>
+<body>
+    @*<form>*@
+        <div>
+            <div class="card bg-light">
+                <article class="card-body mx-auto" style="max-width: 400px;">
+                    <h4 class="card-title mt-3 text-center">Create Account</h4>
+                    <p class="text-center">Get started with your free account</p>
+                    <p>
+                        <a href="" class="btn btn-block btn-twitter"> <i class="fab fa-twitter"></i> Login via Twitter</a>
+                        <a href="" class="btn btn-block btn-facebook"> <i class="fab fa-facebook-f"></i> Login via facebook</a>
+                    </p>
+                    <p class="divider-text">
+                        <span class="bg-light">OR</span>
+                    </p>
+                    <form class="register" asp-action="Register" asp-controller="Account">
+                        <div asp-validation-summary="ModelOnly"></div>
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-user"></i></span>
+                            </div>
+
+                            <input class="form-control" oninput="document.getElementById('loginEror').innerHTML = ''" placeholder="Login" asp-for="Login" />
+                            <div class="input-group">
+                                <span id="loginEror" asp-validation-for="Login"></span>
+                            </div>
+                        </div> <!-- form-group// -->
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-user"></i></span>
+                            </div>
+
+                            <input class="form-control" oninput="document.getElementById('FNameEror').innerHTML = ''" placeholder="FirstName" asp-for="FirstName" />
+                            <div class="input-group">
+                                <span id="FNameEror" asp-validation-for="FirstName"></span>
+                            </div>
+                        </div> <!-- form-group// -->
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-user"></i></span>
+                            </div>
+                            <input class="form-control" oninput="document.getElementById('LNameEror').innerHTML = ''" placeholder="LastName" asp-for="LastName" />
+                            <div class="input-group">
+                                <span id="LNameEror" asp-validation-for="LastName"></span>
+                            </div>
+                        </div> <!-- form-group// -->
+
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                            </div>
+                            <input oninput="document.getElementById('EmailEror').innerHTML = ''" class="form-control" placeholder="Email address" asp-for="Email">
+                            <div class="input-group">
+                                <span id="EmailEror" asp-validation-for="Email"></span>
+                            </div>
+                        </div> <!-- form-group// -->
+
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                            </div>
+                            <input oninput="document.getElementById('PassEror').innerHTML = ''" class="form-control" placeholder="Create password" asp-for="Password">
+                            <div class="input-group">
+                                <span id="PassEror" asp-validation-for="Password"></span>
+                            </div>
+                        </div> <!-- form-group// -->
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                            </div>
+                            <input oninput="document.getElementById('ReppasEror').innerHTML = ''" class="form-control" placeholder="Repeat password" asp-for="PasswordConfirm">
+                            <div class="input-group">
+                                <span id="ReppasEror" asp-validation-for="PasswordConfirm"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-block"> Create Account  </button>
+                        </div>
+                        <p class="text-center">Have an account? <a asp-controller="Account" asp-action="Login">Log In</a> </p>
+                    </form>
+                </article>
+            </div>
+
+        </div>
+
+
+
+
+
+        @*<div class="main-login main-center">
+            <div class="form-group">
+                <label for="name" class="cols-sm-2 control-label">Your Login</label>
+                <div class="cols-sm-10">
+                    <div class="input-group">
+                        <input asp-for="Login" />
+                        <br />
+                    </div>
+                    <span asp-validation-for="Login"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="name" class="cols-sm-2 control-label">Your Name</label>
+                <div class="cols-sm-10">
+                    <div class="input-group">
+                        <input asp-for="FirstName" />
+                        <br />
+                    </div>
+                    <span asp-validation-for="FirstName"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="name" class="cols-sm-2 control-label">Your LastName</label>
+                <div class="cols-sm-10">
+                    <div class="input-group">
+                        <input asp-for="LastName" />
+                        <br />
+                    </div>
+                    <span asp-validation-for="LastName"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email" class="cols-sm-2 control-label">Your Email</label>
+                <div class="cols-sm-10">
+                    <div class="input-group">
+                        <input asp-for="Email" />
+                        <br />
+                    </div>
+                    <span asp-validation-for="Email"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="password" class="cols-sm-2 control-label">Password</label>
+                <div class="cols-sm-10">
+                    <div class="input-group">
+                        <input asp-for="Password" />
+                        <br />
+                    </div>
+                    <span asp-validation-for="Password"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
+                <div class="cols-sm-10">
+                    <div class="input-group">
+                        <input asp-for="PasswordConfirm" />
+                        <br />
+                    </div>
+                    <span asp-validation-for="PasswordConfirm"></span>
+                </div>
+            </div>
+            <div>
+                <input type="submit" value="Register" />
+            </div>
+        </div>*@
+
+
+        @*<h1 class="header">Реєстрація</h1>
+            <p class="mass">Створіть свій власний обліковий запис</p>
+            <div>
+                <label asp-for="Login">Логін Або Номер Картки Чи Номер Телефону *</label><br />
+                <input asp-for="Login" />
+                <span asp-validation-for="Login"></span>
+            </div>
+            <div>
+                <label asp-for="Email">Адреса Електронної Пошти *</label><br />
+                <input asp-for="Email" />
+                <span asp-validation-for="Email"></span>
+            </div>
+            <div>
+                <label asp-for="FirstName">Ім'я *</label><br />
+                <input asp-for="FirstName" />
+                <span asp-validation-for="FirstName"></span>
+            </div>
+            <div>
+                <label asp-for="LastName">Прізвище *</label><br />
+                <input asp-for="LastName" />
+                <span asp-validation-for="LastName"></span>
+            </div>
+            <div>
+                <label asp-for="Password">Пароль *</label><br />
+                <input asp-for="Password" />
+                <span asp-validation-for="Password"></span>
+            </div>
+            <div>
+                <label asp-for="PasswordConfirm">Повторіть пароль *</label><br />
+                <input asp-for="PasswordConfirm" />
+                <span asp-validation-for="PasswordConfirm"></span>
+            </div>
+            <div>
+                <input type="submit" value="Register" />
+            </div>
+        </form>*@
+</body>
+</html>

@@ -1,0 +1,40 @@
+﻿@model MVSschuh.View_Model.LoginViewModel
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="~/css/LoginStyle.css" rel="stylesheet" />
+    <title>Register</title>
+</head>
+<body>
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+            <div class="fadeIn first">
+                <h1>Login</h1>
+            </div>
+            <form method="post" asp-controller="Account" asp-action="Login">
+                <div asp-validation-summary="ModelOnly"></div>
+                <div>
+                    <label asp-for="Login"></label><br />
+                    <input placeholder="username" class="fadeIn second" asp-for="Login" />
+                    <span asp-validation-for="Login"></span>
+                </div>
+                <div>
+                    <label asp-for="Password"></label><br />
+                    <input class="fadeIn third" type="password" placeholder="password" asp-for="Password"/>
+                    <span asp-validation-for="Password"></span>
+                </div>
+                <div>
+                    <input type="submit" value="Login" />
+                </div>
+            </form>
+
+            <!-- Remind Passowrd -->
+            <div id="formFooter">
+                <a class="underlineHover" asp-controller="Home" asp-action="Index">Go to the Site</a>
+            </div>
+
+        </div>
+    </div>
+ </body>
+</html>

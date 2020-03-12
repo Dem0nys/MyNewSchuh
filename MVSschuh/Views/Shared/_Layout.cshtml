@@ -1,0 +1,309 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MVSschuh</title>
+    <link href="~/css/site.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navStyle">
+        <a class="brand-navbar" href="#"><img src="image/logo.png" alt="Responsive image"></a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#mainMenu">
+            <span><i class="fas fa-align-right iconStyle"></i></span>
+        </button>
+        <div class="container">
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a asp-area="" class="nav-link" asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li><a asp-area="" class="nav-link" asp-controller="Home" asp-action="About">About</a></li>
+                    <li><a asp-area="" class="nav-link" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                    <li><a asp-area="" class="nav-link" asp-controller="Account" asp-action="Login">Login</a></li>
+                    <li><a asp-area="" class="nav-link" asp-controller="Account" asp-action="Register">Register</a></li>
+                    <li><a asp-area="" class="nav-link" asp-controller="Account" asp-action="ForgotPassword">Forgot</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    @*<nav>
+        <div class="container">
+            <h1 id="logo" itemprop="logo">
+                <a href="https://www.schuh.co.uk/" itemprop="url" title="schuh" onload="setTimeout(function(){if(performance){window.dataLayer.push({'render_start':Math.round(((new Date().getTime() - performance.timing.navigationStart)/1000)*10) /10});}},0);">
+                    <svg id="icon-schuhLogo" class="icon icon-schuhLogo" viewBox="0 0 100 40"><path class="cls-1" d="M91.82 13.65a8.1 8.1 0 0 0-5.27 1.71v-8h-4.61v25.8h4.61v-10.3c0-3.21 1.84-4.79 4.42-4.79s4.42 1.58 4.42 4.79v10.32H100V22.49c0-5.9-3.39-8.84-8.18-8.84zM73.65 24.63c0 3.1-1.77 4.5-4.24 4.5s-4.24-1.4-4.24-4.5V14h-4.61v10.89c0 5.53 3.65 8.66 8.85 8.66s8.84-3.13 8.84-8.66V14h-4.6zM49.06 13.65a8.1 8.1 0 0 0-5.27 1.71v-8h-4.61v25.8h4.61v-10.3c0-3.21 1.84-4.79 4.42-4.79s4.43 1.58 4.43 4.79v10.32h4.6V22.49c0-5.9-3.39-8.84-8.18-8.84zM30.45 29.13c-3.51 0-5.94-2.29-5.94-5.53s2.43-5.53 5.94-5.53a7.52 7.52 0 0 1 4.31 1.29l1.8-3.95a11.79 11.79 0 0 0-6.26-1.76c-6.45 0-10.58 4.12-10.58 10s4.13 9.95 10.58 9.95a11.85 11.85 0 0 0 6.56-1.95l-1.84-4a7.55 7.55 0 0 1-4.57 1.48zM4.75 20.69c0-1.92 2.07-3 4.69-3a12.27 12.27 0 0 1 5.82 1.44L17 15.38a15.22 15.22 0 0 0-7.55-1.73c-5.45 0-9.3 2.94-9.3 7.29 0 3.36 2.5 6 6.89 6.6l1.84-3.94c-3.02-.3-4.13-1.44-4.13-2.91z"></path><path class="cls-1" d="M10.73 19.65l-1.85 4c2.84.26 4.17 1.32 4.17 2.91 0 2-2.14 3-4.68 3a12.28 12.28 0 0 1-6.6-1.92L0 31.41a15.21 15.21 0 0 0 8.37 2.14c5.05 0 9.29-2.69 9.29-7.26 0-3.06-2.33-6.08-6.93-6.64z"></path></svg>
+                </a>
+                <span class="alt-logo">schuh</span>
+            </h1>
+            <ol id="navLeft" class="navigation">
+                <li id="headerIconsLeft" class="menuItem"></li>
+                <li class="menuItem mLink" data-nav="Womens">
+                    <svg class="arrow-right icon icon-arrow"><use href="#icon-arrow" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow"></use></svg><a href="https://www.schuh.co.uk/womens/">women's</a><div class="Womens dropDown links" style="top: 76px; display: none;">
+                        <div class="wrapper container" style="height: 486px;">
+                            <div class="category column">
+                                <div class="heading ">category<svg class="arrow-right arrow icon icon-arrow"><use href="#icon-arrow" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow"></use></svg></div><ol class="womens">
+                                    <li><a href="https://www.schuh.co.uk/womens/" data-nav="Womens">View All Women's</a></li>
+                                    <li><a href="https://www.schuh.co.uk/womens/new-in/" data-nav="Womens">New Arrivals</a></li>
+                                    <li><a href="https://www.schuh.co.uk/womens/best-sellers/" data-nav="Womens">Bestsellers</a></li>
+                                    <li><a href="https://www.schuh.co.uk/womens/trainers/" data-nav="Womens">Trainers</a></li>
+                                    <li><a href="https://www.schuh.co.uk/womens/boots/" data-nav="Womens">Boots</a></li>
+                                    <li><a href="https://www.schuh.co.uk/womens/sandals/" data-nav="Womens">Sandals &amp; Pool Slides</a></li>
+                                    <li><a href="https://www.schuh.co.uk/clothing/#g=&amp;c2=&amp;c=&amp;p=0,999&amp;b=&amp;sz=&amp;m=&amp;w=&amp;c3=&amp;h=&amp;o=new&amp;st=&amp;origst=&amp;c4=520&amp;bRef=&amp;s=&amp;nd=&amp;kwtype=c&amp;page=1&amp;va=&amp;imp=&amp;" data-nav="Womens">Clothing</a></li>
+                                    <li><a href="https://www.schuh.co.uk/womens/flat-shoes/" data-nav="Womens">Flat Shoes</a></li>
+                                    <li><a href="https://www.schuh.co.uk/womens/high-heels/" data-nav="Womens">High Heels</a></li>
+                                    <li><a href="https://www.schuh.co.uk/womens/low-heels/" data-nav="Womens">Low Heels</a></li>
+                                    <li><a href="https://www.schuh.co.uk/womens/slippers/" data-nav="Womens">Slippers</a></li>
+                                    <li><a href="https://www.schuh.co.uk/accessories/bags/#g=7%5FAccessories,&amp;c2=712%5FBags,&amp;c=&amp;p=0,999&amp;b=&amp;sz=&amp;m=&amp;w=&amp;c3=&amp;h=&amp;o=new&amp;st=&amp;origst=&amp;c4=&amp;bRef=&amp;s=&amp;nd=&amp;kwtype=c&amp;page=1&amp;va=&amp;imp=&amp;" data-nav="Womens">Bags</a></li>
+                                    <li><a href="https://www.schuh.co.uk/accessories/socks/#g=7%5FAccessories,&amp;c2=715%5FSocks,&amp;c=&amp;p=0,999&amp;b=&amp;sz=&amp;m=&amp;w=&amp;c3=704%5FAccessories%20Adult%20Socks,&amp;h=&amp;o=new&amp;st=&amp;origst=&amp;c4=&amp;bRef=&amp;s=&amp;nd=&amp;kwtype=c&amp;page=1&amp;va=&amp;imp=&amp;" data-nav="Womens">Socks</a></li>
+                                    <li><a href="https://www.schuh.co.uk/accessories/#g=7%5FAccessories,&amp;c2=713%5FShoe%20Care,714%5FShoe%20Accessories,&amp;c=&amp;p=0,999&amp;b=&amp;sz=&amp;m=&amp;w=&amp;c3=&amp;h=&amp;o=pop&amp;st=&amp;origst=&amp;c4=&amp;bRef=&amp;s=&amp;nd=&amp;kwtype=c&amp;page=1&amp;va=&amp;imp=&amp;" data-nav="Womens">Shoe Care &amp; Accessories</a></li>
+                                </ol>
+                            </div>
+                            <div class="brands column">
+                                <div class="heading ">brands<svg class="arrow-right arrow icon icon-arrow"><use href="#icon-arrow" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow"></use></svg></div><ol class="womens">
+                                    <li><a href="https://www.schuh.co.uk/brands/womens/" data-nav="Womens">View All Women's Brands</a></li>
+                                    <li><a href="https://www.schuh.co.uk/brands/adidas/#g=1%5FWomens,&amp;p=0,999&amp;b=71%5FAdidas,&amp;o=pop&amp;kwtype=c" data-nav="Womens">adidas</a></li>
+                                    <li><a href="https://www.schuh.co.uk/brands/birkenstock/#g=1%5FWomens,&amp;p=0,999&amp;b=39%5FBirkenstock,&amp;o=pop&amp;kwtype=c" data-nav="Womens">Birkenstock</a></li>
+                                    <li><a href="https://www.schuh.co.uk/brands/calvin-klein/#g=1%5Fwomens&amp;b=502%5FCalvin%20klein" data-nav="Womens">Calvin Klein</a></li>
+                                    <li><a href="https://www.schuh.co.uk/brands/converse/#g=1%5FWomens,&amp;p=0,999&amp;b=49%5FConverse,&amp;o=pop&amp;kwtype=c&amp;va" data-nav="Womens">Converse</a></li>
+                                    <li><a href="https://www.schuh.co.uk/brands/dr-martens/#g=1%5FWomens,&amp;p=0,999&amp;b=34%5FDr%20Martens,&amp;o=pop&amp;kwtype=c" data-nav="Womens">Dr. Martens</a></li>
+                                    <li><a href="https://www.schuh.co.uk/brands/fila-trainers/#g=1%5Fwomens&amp;b=353%5FFila" data-nav="Womens">FILA</a></li>
+                                    <li><a href="https://www.schuh.co.uk/brands/new-balance/#g=1%5FWomens,&amp;p=0,999&amp;b=54%5FNew%20Balance,&amp;o=pop&amp;kwtype=c" data-nav="Womens">New Balance</a></li>
+                                    <li><a href="https://www.schuh.co.uk/brands/nike/#g=1%5FWomens,&amp;p=0,999&amp;b=72%5FNike,&amp;o=pop&amp;kwtype=c" data-nav="Womens">Nike</a></li>
+                                    <li><a href="https://www.schuh.co.uk/brands/red-or-dead/#g=1%5FWomens,&amp;p=0,999&amp;b=31%5FRed%20Or%20Dead,&amp;o=pop&amp;kwtype=c" data-nav="Womens">Red or Dead</a></li>
+                                    <li><a href="https://www.schuh.co.uk/brands/schuh/#g=1%5FWomens,&amp;p=0,999&amp;b=68%5FSchuh,&amp;o=pop&amp;kwtype=c" data-nav="Womens">schuh</a></li>
+                                    <li><a href="https://www.schuh.co.uk/brands/skechers/#g=1%5FWomens,&amp;p=0,999&amp;b=19%5FSkechers,&amp;o=pop&amp;kwtype=c" data-nav="Womens">Skechers</a></li>
+                                    <li><a href="https://www.schuh.co.uk/brands/ugg/#g=1%5FWomens,&amp;p=0,999&amp;b=218%5FUgg,&amp;o=pop&amp;kwtype=c" data-nav="Womens">UGG</a></li>
+                                    <li><a href="https://www.schuh.co.uk/brands/vans/#g=1%5Fwomens&amp;b=59%5FVans" data-nav="Womens">Vans</a></li>
+                                </ol>
+                            </div>
+                            <div class="trends column">
+                                <div class="heading ">trends<svg class="arrow-right arrow icon icon-arrow"><use href="#icon-arrow" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow"></use></svg></div><ol class="womens">
+                                    <li><a href="https://www.schuh.co.uk/nike-air-force-1/#g=1%5FWomens,&amp;p=0,999&amp;o=pop&amp;c4=448&amp;kwtype=c" data-nav="Womens">Nike Air Force 1</a></li>
+                                    <li><a href="https://www.schuh.co.uk/brands/dr-martens/#g=1%5FWomens,&amp;c2=140%5FWomens%20Boots,&amp;p=0,999&amp;b=34%5FDr%20Martens,&amp;o=pop&amp;kwtype=c" data-nav="Womens">Dr. Martens Boots</a></li>
+                                    <li><a href="https://www.schuh.co.uk/chunky-trainers/#g=1%5FWomens,&amp;p=0,999&amp;o=new&amp;c4=504&amp;kwtype=c" data-nav="Womens">Chunky Trainers</a></li>
+                                    <li><a href="https://www.schuh.co.uk/brands/converse/?strm=converse%20all%20star&amp;strm=converse%20all%20star#g=1%5FWomens,&amp;p=0,999&amp;b=49%5FConverse,&amp;o=pop&amp;st=all%20star&amp;kwtype=c" data-nav="Womens">Converse All Star</a></li>
+                                    <li><a href="https://www.schuh.co.uk/black-trainers/#g=1%5FWomens,&amp;p=0,999&amp;o=pop&amp;c4=426&amp;kwtype=c&amp;va=1" data-nav="Womens">Black Trainers</a></li>
+                                    <li><a href="https://www.schuh.co.uk/white-trainers/#g=1%5FWomens,&amp;p=0,999&amp;o=pop&amp;c4=425&amp;kwtype=c" data-nav="Womens">White Trainers</a></li>
+                                    <li><a href="https://www.schuh.co.uk/nike-air-max/?strm=nike%20air%20max#g=1%5FWomens,&amp;p=0,999&amp;o=new&amp;st=nike%20air%20max&amp;kwtype=c" data-nav="Womens">Nike Air Max</a></li>
+                                    <li><a href="https://www.schuh.co.uk/vans-old-skool/#g=1%5FWomens,&amp;p=0,999&amp;o=pop&amp;c4=343&amp;kwtype=c" data-nav="Womens">Vans Old Skool</a></li>
+                                    <li><a href="https://www.schuh.co.uk/womens/ankle-boots/#g=1%5FWomens,&amp;p=0,999&amp;o=pop&amp;st=ankle%20boot&amp;kwtype=c" data-nav="Womens">Ankle Boots</a></li>
+                                    <li><a href="https://www.schuh.co.uk/womens/wedding-shoes/" data-nav="Womens">Wedding Shoes</a></li>
+                                    <li><a href="https://www.schuh.co.uk/vegan-shoes/#g=1%5FWomens,&amp;p=0,999&amp;o=pop&amp;c4=476&amp;kwtype=c" data-nav="Womens">Vegan Shoes</a></li>
+                                    <li><a href="https://www.schuh.co.uk/back-in-stock/" data-nav="Womens">Back in Stock</a></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="menuItem mLink" data-nav="Mens">
+                    <svg class="arrow-right icon icon-arrow"><use href="#icon-arrow" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow"></use></svg><a href="https://www.schuh.co.uk/mens/">men's</a><div class="Mens dropDown links" style="top: 76px; display: none;">
+                        <div class="wrapper container" style="height: 486px;">
+                            <div class="category column">
+                                <div class="heading ">category<svg class="arrow-right arrow icon icon-arrow"><use href="#icon-arrow" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow"></use></svg></div><ol class="mens">
+                                    <li><a href="https://www.schuh.co.uk/mens/" data-nav="Mens">View All Men's</a></li>
+                                    <li><a href="https://www.schuh.co.uk/mens/new-in/" data-nav="Mens">New Arrivals</a></li>
+                                    <li><a href="https://www.schuh.co.uk/mens/bestsellers/" data-nav="Mens">Bestsellers</a></li>
+                                    <li><a href="https://www.schuh.co.uk/mens/trainers/" data-nav="Mens">Trainers</a></li>
+                                    <li><a href="https://www.schuh.co.uk/mens/boots/#g=3%5FMens,&amp;c2=320%5FMens%20Boots,&amp;p=0,999&amp;o=pop&amp;kwtype=c" data-nav="Mens">Boots</a></li>
+                                    <li><a href="https://www.schuh.co.uk/mens/shoes/" data-nav="Mens">Shoes</a></li>
+                                    <li><a href="https://www.schuh.co.uk/mens/sandals/" data-nav="Mens">Sandals &amp; Pool Slides</a></li>
+                                    <li><a href="https://www.schuh.co.uk/clothing/#g=&amp;c2=&amp;c=&amp;p=0,999&amp;b=&amp;sz=&amp;m=&amp;w=&amp;c3=&amp;h=&amp;o=new&amp;st=&amp;origst=&amp;c4=520&amp;bRef=&amp;s=&amp;nd=&amp;kwtype=c&amp;page=1&amp;va=&amp;imp=&amp;" data-nav="Mens">Clothing</a></li>
+                                    <li><a href="https://www.schuh.co.uk/mens/slippers/" data-nav="Mens">Slippers</a></li>
+                                    <li><a href="https://www.schuh.co.uk/accessories/bags/#g=7%5FAccessories,&amp;c2=712%5FBags,&amp;c=&amp;p=0,999&amp;b=&amp;sz=&amp;m=&amp;w=&amp;c3=&amp;h=&amp;o=new&amp;st=&amp;origst=&amp;c4=&amp;bRef=&amp;s=&amp;nd=&amp;kwtype=c&amp;page=1&amp;va=&amp;imp=&amp;" data-nav="Mens">Bags</a></li>
+                                    <li><a href="https://www.schuh.co.uk/accessories/socks/#g=7%5FAccessories,&amp;c2=715%5FSocks,&amp;c=&amp;p=0,999&amp;b=&amp;sz=&amp;m=&amp;w=&amp;c3=704%5FAccessories%20Adult%20Socks,&amp;h=&amp;o=new&amp;st=&amp;origst=&amp;c4=&amp;bRef=&amp;s=&amp;nd=&amp;kwtype=c&amp;page=1&amp;va=&amp;imp=&amp;" data-nav="Mens">Socks</a></li>
+                                    <li><a href="https://www.schuh.co.uk/accessories/#g=7%5FAccessories,&amp;c2=716%5FCaps%20And%20Hats,&amp;c=&amp;p=0,999&amp;b=&amp;sz=&amp;m=&amp;w=&amp;c3=715%5FAccessories%20Beanie%20Hats,714%5FAccessories%20Caps,716%5FAccessories%20Hats,&amp;h=&amp;o=new&amp;st=&amp;origst=&amp;c4=&amp;bRef=&amp;s=&amp;nd=&amp;kwtype=c&amp;page=1&amp;va=&amp;imp=&amp;" data-nav="Mens">Caps &amp; Hats</a></li>
+                                    <li><a href="https://www.schuh.co.uk/accessories/#g=7%5FAccessories,&amp;c2=713%5FShoe%20Care,714%5FShoe%20Accessories,&amp;c=&amp;p=0,999&amp;b=&amp;sz=&amp;m=&amp;w=&amp;c3=&amp;h=&amp;o=pop&amp;st=&amp;origst=&amp;c4=&amp;bRef=&amp;s=&amp;nd=&amp;kwtype=c&amp;page=1&amp;va=&amp;imp=&amp;" data-nav="Mens">Shoe Care &amp; Accessories</a></li>
+                                </ol>
+                            </div>
+                            <div class="brands column">
+                                <div class="heading ">brands<svg class="arrow-right arrow icon icon-arrow"><use href="#icon-arrow" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow"></use></svg></div><ol class="mens">
+                                    <li><a href="https://www.schuh.co.uk/brands/mens/" data-nav="Mens">View All Men's Brands</a></li>
+                                    <li><a href="https://www.schuh.co.uk/brands/adidas/#g=3%5FMens,&amp;p=0,999&amp;b=71%5FAdidas,&amp;o=pop&amp;kwtype=c" data-nav="Mens">adidas</a></li>
+                                    <li><a href="https://www.schuh.co.uk/brands/base-london/" data-nav="Mens">Base London</a></li>
+                                    <li><a href="https://www.schuh.co.uk/brands/converse/#g=3%5FMens,&amp;p=0,999&amp;b=49%5FConverse,&amp;o=pop&amp;kwtype=c" data-nav="Mens">Converse</a></li>
+                                    <li><a href="https://www.schuh.co.uk/brands/dr-martens/#g=3%5FMens,&amp;p=0,999&amp;b=34%5FDr%20Martens,&amp;o=pop&amp;kwtype=c" data-nav="Mens">Dr. Martens</a></li>
+                                    <li><a href="https://www.schuh.co.uk/brands/lacoste/#g=3%5FMens,&amp;p=0,999&amp;b=310%5FLacoste,&amp;o=pop&amp;kwtype=c" data-nav="Mens">Lacoste</a></li>
+                                    <li><a href="https://www.schuh.co.uk/brands/new-balance/#g=3%5FMens,&amp;p=0,999&amp;b=54%5FNew%20Balance,&amp;o=pop&amp;kwtype=c" data-nav="Mens">New Balance</a></li>
+                                    <li><a href="https://www.schuh.co.uk/brands/nike/#g=3%5FMens,&amp;p=0,999&amp;b=72%5FNike,&amp;o=pop&amp;kwtype=c" data-nav="Mens">Nike</a></li>
+                                    <li><a href="https://www.schuh.co.uk/brands/nike-sb/#g=3%5FMens,&amp;p=0,999&amp;b=396%5FNike%20Sb,&amp;o=pop&amp;kwtype=c" data-nav="Mens">Nike SB</a></li>
+                                    <li><a href="https://www.schuh.co.uk/brands/polo-ralph-lauren/#g=3%5Fmens&amp;b=430%5FPolo%20ralph%20lauren" data-nav="Mens">Polo Ralph Lauren</a></li>
+                                    <li><a href="https://www.schuh.co.uk/brands/schuh/#g=3%5FMens,&amp;p=0,999&amp;b=68%5FSchuh,&amp;o=pop&amp;kwtype=c" data-nav="Mens">schuh</a></li>
+                                    <li><a href="https://www.schuh.co.uk/brands/skechers/#g=3%5FMens,&amp;p=0,999&amp;b=19%5FSkechers,&amp;o=pop&amp;kwtype=c" data-nav="Mens">Skechers</a></li>
+                                    <li><a href="https://www.schuh.co.uk/brands/timberland/#g=3%5FMens,&amp;p=0,999&amp;b=81%5FTimberland,&amp;o=pop&amp;kwtype=c" data-nav="Mens">Timberland</a></li>
+                                    <li><a href="https://www.schuh.co.uk/brands/vans/#g=3%5FMens,&amp;p=0,999&amp;b=59%5FVans,&amp;o=pop&amp;kwtype=c" data-nav="Mens">Vans</a></li>
+                                </ol>
+                            </div>
+                            <div class="trends column">
+                                <div class="heading ">trends<svg class="arrow-right arrow icon icon-arrow"><use href="#icon-arrow" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow"></use></svg></div><ol class="mens">
+                                    <li><a href="https://www.schuh.co.uk/mens/retro-trainers/" data-nav="Mens">Retro Trainers</a></li>
+                                    <li><a href="https://www.schuh.co.uk/nike-air-force-1/#g=3%5FMens,&amp;p=0,999&amp;o=pop&amp;c4=448&amp;kwtype=c" data-nav="Mens">Nike Air Force 1</a></li>
+                                    <li><a href="https://www.schuh.co.uk/adidas-gazelle/#g=3%5FMens,&amp;p=0,999&amp;b=71%5FAdidas,&amp;o=pop&amp;st=gazelle&amp;kwtype=c" data-nav="Mens">adidas Gazelle</a></li>
+                                    <li><a href="https://www.schuh.co.uk/mens/running-styles/" data-nav="Mens">Running Shoes</a></li>
+                                    <li><a href="https://www.schuh.co.uk/mens/terrace-trainers/" data-nav="Mens">Terrace Trainers</a></li>
+                                    <li><a href="https://www.schuh.co.uk/black-trainers/#g=3%5FMens,&amp;p=0,999&amp;o=pop&amp;c4=426&amp;kwtype=c" data-nav="Mens">Black Trainers</a></li>
+                                    <li><a href="https://www.schuh.co.uk/white-trainers/#g=3%5FMens,&amp;p=0,999&amp;o=pop&amp;c4=425&amp;kwtype=c" data-nav="Mens">White Trainers</a></li>
+                                    <li><a href="https://www.schuh.co.uk/nike-air-max/?strm=nike%20air%20max#g=3%5FMens,&amp;p=0,999&amp;o=new&amp;st=nike%20air%20max&amp;kwtype=c" data-nav="Mens">Nike Air Max</a></li>
+                                    <li><a href="https://www.schuh.co.uk/mens/chelsea-boots/" data-nav="Mens">Chelsea Boots</a></li>
+                                    <li><a href="https://www.schuh.co.uk/vans-old-skool/#g=3%5FMens,&amp;p=0,999&amp;o=pop&amp;c4=343&amp;kwtype=c" data-nav="Mens">Vans Old Skool</a></li>
+                                    <li><a href="https://www.schuh.co.uk/back-in-stock/" data-nav="Mens">Back In Stock</a></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+            <ol id="navRight" class="navigation">
+                <li class="menuItem mLink" data-nav="Accessories">
+                    <svg class="arrow-right icon icon-arrow"><use href="#icon-arrow" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow"></use></svg><a href="https://www.schuh.co.uk/accessories/">accessories</a><div class="Accessories dropDown links" style="top: 76px; display: none;">
+                        <div class="wrapper container" style="height: 470px;">
+                            <div class="category column">
+                                <div class="heading ">category<svg class="arrow-right arrow icon icon-arrow"><use href="#icon-arrow" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow"></use></svg></div><ol class="accessories">
+                                    <li><a href="https://www.schuh.co.uk/accessories/" data-nav="Accessories">View All Accessories</a></li>
+                                    <li><a href="https://www.schuh.co.uk/accessories/new-in/" data-nav="Accessories">New Arrivals</a></li>
+                                    <li><a href="https://www.schuh.co.uk/accessories/bestsellers/" data-nav="Accessories">Bestsellers</a></li>
+                                    <li><a href="https://www.schuh.co.uk/clothing/#g=&amp;c2=&amp;c=&amp;p=0,999&amp;b=&amp;sz=&amp;m=&amp;w=&amp;c3=&amp;h=&amp;o=new&amp;st=&amp;origst=&amp;c4=520&amp;bRef=&amp;s=&amp;nd=&amp;kwtype=c&amp;page=1&amp;va=&amp;imp=&amp;" data-nav="Accessories">Clothing</a></li>
+                                    <li><a href="https://www.schuh.co.uk/accessories/socks/#g=7%5FAccessories,&amp;c2=715%5FSocks,&amp;c=&amp;p=0,999&amp;b=&amp;sz=&amp;m=&amp;w=&amp;c3=&amp;h=&amp;o=new&amp;st=&amp;origst=&amp;c4=&amp;bRef=&amp;s=&amp;nd=&amp;kwtype=c&amp;page=1&amp;va=&amp;imp=&amp;" data-nav="Accessories">Socks</a></li>
+                                    <li><a href="https://www.schuh.co.uk/accessories/bags/#g=7%5FAccessories,&amp;c2=712%5FBags,&amp;c=&amp;p=0,999&amp;b=&amp;sz=&amp;m=&amp;w=&amp;c3=&amp;h=&amp;o=new&amp;st=&amp;origst=&amp;c4=&amp;bRef=&amp;s=&amp;nd=&amp;kwtype=c&amp;page=1&amp;va=&amp;imp=&amp;" data-nav="Accessories">Bags &amp; Backpacks</a></li>
+                                    <li><a href="https://www.schuh.co.uk/accessories/#g=7%5FAccessories,&amp;c2=716%5FCaps%20And%20Hats,&amp;c=&amp;p=0,999&amp;b=&amp;sz=&amp;m=&amp;w=&amp;c3=&amp;h=&amp;o=new&amp;st=&amp;origst=&amp;c4=&amp;bRef=&amp;s=&amp;nd=&amp;kwtype=c&amp;page=1&amp;va=&amp;imp=&amp;" data-nav="Accessories">Caps &amp; Hats</a></li>
+                                    <li><a href="https://www.schuh.co.uk/accessories/shoe-care/" data-nav="Accessories">Shoe Care</a></li>
+                                    <li><a href="https://www.schuh.co.uk/accessories/shoe-accessories/" data-nav="Accessories">Laces &amp; Charms</a></li>
+                                    <li><a href="https://www.schuh.co.uk/gift-cards/" data-nav="Accessories">Gift Cards</a></li>
+                                </ol>
+                            </div>
+                            <div class="brands column">
+                                <div class="heading ">brands<svg class="arrow-right arrow icon icon-arrow"><use href="#icon-arrow" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow"></use></svg></div><ol class="accessories">
+                                    <li><a href="https://www.schuh.co.uk/brands/accessories/" data-nav="Accessories">View All Brands</a></li>
+                                    <li><a href="https://www.schuh.co.uk/accessories/#g=7%5FAccessories,&amp;p=0,999&amp;b=71%5FAdidas,&amp;o=pop&amp;kwtype=c" data-nav="Accessories">adidas</a></li>
+                                    <li><a href="https://www.schuh.co.uk/accessories/#g=7%5FAccessories,&amp;p=0,999&amp;b=49%5FConverse,&amp;o=pop&amp;kwtype=c" data-nav="Accessories">Converse</a></li>
+                                    <li><a href="https://www.schuh.co.uk/accessories/#g=7%5FAccessories,&amp;p=0,999&amp;b=516%5FChampion,&amp;o=pop&amp;kwtype=c" data-nav="Accessories">Champion</a></li>
+                                    <li><a href="https://www.schuh.co.uk/accessories/#g=7%5FAccessories,&amp;p=0,999&amp;b=34%5FDr%20Martens,&amp;o=pop&amp;kwtype=c" data-nav="Accessories">Dr Martens</a></li>
+                                    <li><a href="https://www.schuh.co.uk/accessories/#g=7%5FAccessories,&amp;p=0,999&amp;b=353%5FFila,&amp;o=new&amp;kwtype=c" data-nav="Accessories">FILA</a></li>
+                                    <li><a href="https://www.schuh.co.uk/brands/fjallraven/#g=7%5FAccessories&amp;b=520%5FFjallraven" data-nav="Accessories">Fjallraven</a></li>
+                                    <li><a href="https://www.schuh.co.uk/accessories/#g=7%5FAccessories,&amp;p=0,999&amp;b=315%5FHunter,&amp;o=pop&amp;kwtype=c" data-nav="Accessories">Hunter</a></li>
+                                    <li><a href="https://www.schuh.co.uk/brands/hype/#g=&amp;c2=&amp;c=&amp;p=0,999&amp;b=496%5FHype,&amp;sz=&amp;m=&amp;w=&amp;c3=&amp;h=&amp;o=new&amp;st=&amp;origst=&amp;c4=&amp;bRef=&amp;s=&amp;nd=&amp;kwtype=c&amp;page=1&amp;va=&amp;imp=&amp;" data-nav="Accessories">Hype</a></li>
+                                    <li><a href="https://www.schuh.co.uk/accessories/#g=7%5FAccessories,&amp;p=0,999&amp;b=385%5FNew%20Era,&amp;o=new&amp;kwtype=c" data-nav="Accessories">New Era</a></li>
+                                    <li><a href="https://www.schuh.co.uk/accessories/#g=7%5FAccessories,&amp;p=0,999&amp;b=72%5FNike,&amp;o=new&amp;kwtype=c" data-nav="Accessories">Nike</a></li>
+                                    <li><a href="https://www.schuh.co.uk/accessories/#g=7%5FAccessories,&amp;p=0,999&amp;b=68%5FSchuh,&amp;o=pop&amp;kwtype=c" data-nav="Accessories">schuh</a></li>
+                                    <li><a href="https://www.schuh.co.uk/accessories/#g=7%5FAccessories,&amp;p=0,999&amp;b=498%5FTommy%20Hilfiger,&amp;o=pop&amp;kwtype=c" data-nav="Accessories">Tommy Hilfiger</a></li>
+                                    <li><a href="https://www.schuh.co.uk/accessories/#g=7%5FAccessories,&amp;p=0,999&amp;b=59%5FVans,&amp;o=new&amp;kwtype=c" data-nav="Accessories">Vans</a></li>
+                                </ol>
+                            </div>
+                            <div class="trends column">
+                                <div class="heading ">trends<svg class="arrow-right arrow icon icon-arrow"><use href="#icon-arrow" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow"></use></svg></div><ol class="accessories">
+                                    <li><a href="https://www.schuh.co.uk/accessories/bags/#g=7%5FAccessories,&amp;c2=712%5FBags,&amp;p=0,999&amp;c3=696%5FAccessories%20Backpacks,&amp;o=new&amp;kwtype=c" data-nav="Accessories">Backpacks</a></li>
+                                    <li><a href="https://www.schuh.co.uk/accessories/school-bags/#g=&amp;c2=&amp;c=&amp;p=0,999&amp;b=&amp;sz=&amp;m=&amp;w=&amp;c3=&amp;h=&amp;o=new&amp;st=&amp;origst=&amp;c4=140&amp;bRef=&amp;s=&amp;nd=&amp;kwtype=c&amp;page=1&amp;va=&amp;imp=&amp;" data-nav="Accessories">School Bags</a></li>
+                                    <li><a href="https://www.schuh.co.uk/shoulder-bags/" data-nav="Accessories">Shoulder Bags</a></li>
+                                    <li><a href="https://www.schuh.co.uk/brands/new-era/#g=&amp;c2=&amp;c=&amp;p=0,999&amp;b=385%5FNew%20Era,&amp;sz=&amp;m=&amp;w=&amp;c3=&amp;h=&amp;o=new&amp;st=&amp;origst=&amp;c4=&amp;bRef=&amp;s=&amp;nd=&amp;kwtype=c&amp;page=1&amp;va=&amp;imp=&amp;" data-nav="Accessories">New Era Caps</a></li>
+                                    <li><a href="https://www.schuh.co.uk/beanie-hats/" data-nav="Accessories">Beanie Hats</a></li>
+                                    <li><a href="https://www.schuh.co.uk/accessories/laces/" data-nav="Accessories">Laces</a></li>
+                                    <li><a href="https://www.schuh.co.uk/welly-socks/" data-nav="Accessories">Welly Socks</a></li>
+                                    <li><a href="https://www.schuh.co.uk/accessories/bum-bags/#g=&amp;c2=&amp;c=&amp;p=0,999&amp;b=&amp;sz=&amp;m=&amp;w=&amp;c3=&amp;h=&amp;o=new&amp;st=&amp;origst=&amp;c4=503&amp;bRef=&amp;s=&amp;nd=&amp;kwtype=c&amp;page=1&amp;va=&amp;imp=&amp;" data-nav="Accessories">Bum Bags</a></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="menuItem mLink" data-nav="Kids">
+                    <svg class="arrow-right icon icon-arrow"><use href="#icon-arrow" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow"></use></svg><a href="https://www.schuh.co.uk/kids/">kids</a><div class="Kids dropDown links" style="top: 76px; display: none;">
+                        <hr class="navUnderLine" style="margin-left: 305.648px;"><div class="wrapper container" style="height: 486px;">
+                            <div class="category column">
+                                <div class="heading ">category<svg class="arrow-right arrow icon icon-arrow"><use href="#icon-arrow" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow"></use></svg></div><ol class="kids">
+                                    <li><a href="https://www.schuh.co.uk/kids/" data-nav="Kids">View All Kids' Shoes</a></li>
+                                    <li><a href="https://www.schuh.co.uk/kids/new-in/" data-nav="Kids">New Arrivals</a></li>
+                                    <li><a href="https://www.schuh.co.uk/kids/bestsellers/" data-nav="Kids">Bestsellers</a></li>
+                                    <li><a href="https://www.schuh.co.uk/kids/trainers/?strm=kids%20trainers#origst=kids%20trainers" data-nav="Kids">Kids' Trainers</a></li>
+                                    <li><a href="https://www.schuh.co.uk/kids/boots/" data-nav="Kids">Kids' Boots</a></li>
+                                    <li><a href="https://www.schuh.co.uk/kids/sandals/#g=2%5FKids%20Unisex,5%5FBoys,8%5FGirls,&amp;p=0,999&amp;o=pop&amp;st=sandals&amp;kwtype=c" data-nav="Kids">Kids' Sandals &amp; Pool Slides</a></li>
+                                    <li><a href="https://www.schuh.co.uk/kids/girls-shoes/" data-nav="Kids">Girls' Shoes</a></li>
+                                    <li><a href="https://www.schuh.co.uk/kids/boys-shoes/" data-nav="Kids">Boys' Shoes</a></li>
+                                    <li><a href="https://www.schuh.co.uk/kids/toddler-shoes/" data-nav="Kids">Toddler Shoes</a></li>
+                                    <li><a href="https://www.schuh.co.uk/kids/baby-shoes/" data-nav="Kids">Baby Shoes</a></li>
+                                    <li><a href="https://www.schuh.co.uk/kids/slippers/" data-nav="Kids">Kids' Slippers</a></li>
+                                    <li><a href="https://www.schuh.co.uk/accessories/#g=7%5FAccessories,&amp;c2=712%5FBags,715%5FSocks,716%5FCaps%20And%20Hats,&amp;c=&amp;p=0,999&amp;b=&amp;sz=&amp;m=&amp;w=&amp;c3=696%5FAccessories%20Backpacks,731%5FAccessories%20Kids%20Hats%20And%20Caps,706%5FAccessories%20Kids%20Socks,&amp;h=&amp;o=new&amp;st=&amp;origst=&amp;c4=&amp;bRef=&amp;s=&amp;nd=&amp;kwtype=c&amp;page=1&amp;va=&amp;imp=&amp;" data-nav="Kids">Kids' Accessories</a></li>
+                                    <li><a href="https://www.schuh.co.uk/schuh-kids/" data-nav="Kids">schuh Kids</a></li>
+                                    <li><a href="https://www.schuh.co.uk/help/schuh-kids-fitting-guide/" data-nav="Kids">Fitting Guide</a></li>
+                                </ol>
+                            </div>
+                            <div class="brands column">
+                                <div class="heading ">brands<svg class="arrow-right arrow icon icon-arrow"><use href="#icon-arrow" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow"></use></svg></div><ol class="kids">
+                                    <li><a href="https://www.schuh.co.uk/brands/kids/" data-nav="Kids">View All Kids Brands</a></li>
+                                    <li><a href="https://www.schuh.co.uk/brands/adidas/#g=2%5FKids%20Unisex,5%5FBoys,8%5FGirls,&amp;p=0,999&amp;b=71%5FAdidas,&amp;o=pop&amp;kwtype=c" data-nav="Kids">adidas</a></li>
+                                    <li><a href="https://www.schuh.co.uk/brands/converse/#g=2%5FKids%20unisex,5%5FKids%20Boys,8%5FKids%20Girls&amp;b=49%5FConverse" data-nav="Kids">Converse</a></li>
+                                    <li><a href="https://www.schuh.co.uk/brands/dr-martens/#g=2%5FKids%20Unisex,5%5FBoys,8%5FGirls,&amp;p=0,999&amp;b=34%5FDr%20Martens,&amp;o=pop&amp;kwtype=c" data-nav="Kids">Dr. Martens</a></li>
+                                    <li><a href="https://www.schuh.co.uk/brands/fila-trainers/?strm=fila#g=2%5FKids%20Unisex,5%5FBoys,8%5FGirls,&amp;p=0,999&amp;b=353%5FFila,&amp;o=pop&amp;kwtype=c" data-nav="Kids">FILA</a></li>
+                                    <li><a href="https://www.schuh.co.uk/brands/hunter/#g=2%5FKids%20Unisex,8%5FGirls,&amp;p=0,999&amp;b=315%5FHunter,&amp;o=pop&amp;kwtype=c" data-nav="Kids">Hunter</a></li>
+                                    <li><a href="https://www.schuh.co.uk/brands/kickers/#g=2%5FKids%20Unisex,5%5FBoys,8%5FGirls,&amp;p=0,999&amp;b=44%5FKickers,&amp;o=pop&amp;kwtype=c" data-nav="Kids">Kickers</a></li>
+                                    <li><a href="https://www.schuh.co.uk/brands/lelli-kelly/" data-nav="Kids">Lelli Kelly</a></li>
+                                    <li><a href="https://www.schuh.co.uk/brands/new-balance/#g=2%5FKids%20Unisex,5%5FBoys,8%5FGirls,&amp;p=0,999&amp;b=54%5FNew%20Balance,&amp;o=pop&amp;kwtype=c" data-nav="Kids">New Balance</a></li>
+                                    <li><a href="https://www.schuh.co.uk/brands/nike/#g=2%5FKids%20Unisex,5%5FBoys,8%5FGirls,&amp;p=0,999&amp;b=72%5FNike,&amp;o=pop&amp;kwtype=c" data-nav="Kids">Nike</a></li>
+                                    <li><a href="https://www.schuh.co.uk/brands/nike-jordan/#g=2%5FKids%20Unisex,5%5FBoys,&amp;p=0,999&amp;b=468%5FNike%20Jordan,&amp;o=pop&amp;kwtype=c" data-nav="Kids">Nike Jordan</a></li>
+                                    <li><a href="https://www.schuh.co.uk/brands/timberland/#g=2%5FKids%20Unisex,5%5FBoys,8%5FGirls,&amp;p=0,999&amp;b=81%5FTimberland,&amp;o=pop&amp;kwtype=c" data-nav="Kids">Timberland</a></li>
+                                    <li><a href="https://www.schuh.co.uk/brands/ugg/#g=2%5FKids%20Unisex,5%5FBoys,8%5FGirls,&amp;p=0,999&amp;b=218%5FUgg,&amp;o=pop&amp;kwtype=c" data-nav="Kids">UGG</a></li>
+                                    <li><a href="https://www.schuh.co.uk/brands/vans/#g=2%5FKids%20unisex,5%5FKids%20Boys,8%5FKids%20Girls&amp;b=59%5FVans" data-nav="Kids">Vans</a></li>
+                                </ol>
+                            </div>
+                            <div class="trends column">
+                                <div class="heading ">trends<svg class="arrow-right arrow icon icon-arrow"><use href="#icon-arrow" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow"></use></svg></div><ol class="kids">
+                                    <li><a href="https://www.schuh.co.uk/nike-air-force-1/?strm=nike%20air%20force%201#g=2%5FKids%20Unisex,5%5FBoys,8%5FGirls,&amp;p=0,999&amp;o=pop&amp;st=nike&amp;c4=448&amp;kwtype=c" data-nav="Kids">Nike Air Force 1</a></li>
+                                    <li><a href="https://www.schuh.co.uk/nike-air-max/#g=2%5FKids%20Unisex,5%5FBoys,8%5FGirls,&amp;p=0,999&amp;o=new&amp;st=nike%20air%20max&amp;kwtype=c" data-nav="Kids">Nike Air Max</a></li>
+                                    <li><a href="https://www.schuh.co.uk/adidas-gazelle/?strm=adidas%20gazelle#g=2%5FKids%20Unisex,5%5FBoys,8%5FGirls,&amp;p=0,999&amp;b=71%5FAdidas,&amp;o=pop&amp;st=gazelle&amp;kwtype=c" data-nav="Kids">adidas Gazelle</a></li>
+                                    <li><a href="https://www.schuh.co.uk/brands/dr-martens/?strm=dr%20martens%201460#g=2%5FKids%20Unisex,8%5FGirls,&amp;p=0,999&amp;b=34%5FDr%20Martens,&amp;o=pop&amp;st=1460&amp;kwtype=c" data-nav="Kids">Dr. Martens 1460</a></li>
+                                    <li><a href="https://www.schuh.co.uk/fila-disruptor-ii/#g=2%5FKids%20Unisex,5%5FBoys,8%5FGirls,&amp;p=0,999&amp;o=pop&amp;st=fila%20disruptor&amp;kwtype=c" data-nav="Kids">Fila Disruptor</a></li>
+                                    <li><a href="https://www.schuh.co.uk/kids/?strm=boys%20trainers#g=2%7Ckids%20unisex,5%7Ckids%20boys&amp;st=trainers&amp;origst=boys%20trainers" data-nav="Kids">Boys' Trainers</a></li>
+                                    <li><a href="https://www.schuh.co.uk/kids/?strm=girls%20trainers#g=2%7Ckids%20unisex,8%7Ckids%20girls&amp;st=trainers&amp;origst=girls%20trainers" data-nav="Kids">Girls' Trainers</a></li>
+                                    <li><a href="https://www.schuh.co.uk/wellies/?strm=wellies#g=2%5FKids%20Unisex,8%5FGirls,&amp;p=0,999&amp;o=pop&amp;c4=432&amp;kwtype=c" data-nav="Kids">Kids' Wellies</a></li>
+                                    <li><a href="https://www.schuh.co.uk/kids/boys-school-shoes/" data-nav="Kids">Boys' School Shoes</a></li>
+                                    <li><a href="https://www.schuh.co.uk/kids/girls-school-shoes/" data-nav="Kids">Girls' School Shoes</a></li>
+                                    <li><a href="https://www.schuh.co.uk/back-in-stock/" data-nav="Kids">Back In Stock</a></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </nav>*@
+
+
+    @*<nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">MVSschuh</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                        <li><a class="nav-link text-dark" asp-controller="Account" asp-action="Login">Login</a></li>
+                        <li><a class="nav-link text-dark" asp-controller="Account" asp-action="Register">Register</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>*@
+
+    <partial name="_CookieConsentPartial" />
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; 2020 - MVSschuh</p>
+        </footer>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
